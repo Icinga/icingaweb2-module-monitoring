@@ -28,7 +28,10 @@
 
 namespace Monitoring\Form\Command;
 
-class Comment extends AbstractCommand
+/**
+ * Form to handle DelayNotification command
+ */
+class DelayNotification extends AbstractCommand
 {
     /**
      * Interface method to build the form
@@ -36,27 +39,19 @@ class Comment extends AbstractCommand
      */
     protected function create()
     {
-        $this->addElement($this->createAuthorField());
-
         $this->addElement(
-            'textarea',
-            'comment',
+            'text',
+            'minutes',
             array(
-                'label' => t('Comment'),
-                'rows'  => 4
+                'label' => t('Notification delay'),
+                'style' => 'width: 80px;',
+                'value' => 0
             )
         );
 
-        $this->addElement(
-            'checkbox',
-            'persistent',
-            array(
-                'label' => t('Persistent'),
-                'value' => false
-            )
-        );
+        $this->addNote('Delay next notification in minutes from now');
 
-        $this->setSubmitLabel(t('Post comment'));
+        $this->setSubmitLabel(t('Delay notification'));
 
         parent::create();
     }
