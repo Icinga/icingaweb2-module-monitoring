@@ -38,7 +38,6 @@ class Monitoring_ConfigController extends BaseConfigController {
         return array(
             "backends" => new Tab(array(
                 "name"  => "backends",
-                "iconCls"  => "hdd",
                 "title" => "Monitoring Backends",
                 "url"   => Url::fromPath("/monitoring/config/backend")
             ))
