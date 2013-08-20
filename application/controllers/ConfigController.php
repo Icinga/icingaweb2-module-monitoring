@@ -36,17 +36,17 @@ class Monitoring_ConfigController extends BaseConfigController {
     static public function createProvidedTabs()
     {
         return array(
-            "backends" => new Tab(array(
-                "name"  => "backends",
-                "title" => "Monitoring Backends",
-                "url"   => Url::fromPath("/monitoring/config/backend")
+            'backends' => new Tab(array(
+                'name'  => 'backends',
+                'title' => 'Monitoring Backends',
+                'url'   => Url::fromPath('/monitoring/config/backend')
             ))
         );
     }
 
     public function backendAction()
     {
-        $this->redirectNow("/config");
+        $this->redirectNow('/config');
     }
 
 }
