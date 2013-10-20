@@ -32,18 +32,21 @@ namespace Icinga\Module\Monitoring\Backend\Statusdat\Query;
  * Class HostgroupsummaryQuery
  * @package Icinga\Backend\Statusdat
  */
-class HostgroupQuery extends StatusdatQuery
+class ServicegroupQuery extends StatusdatQuery
 {
     public static $mappedParameters = array(
-        'hostgroups'      => 'hostgroup_name',
-        'hostgroup_name'  => 'hostgroup_name',
-        'hostgroup_alias' => 'alias',
-        'host'            => 'host.host_name',
-        'host_name'       => 'host.host_name'
+        'servicegroups'      => 'servicegroup_name',
+        'servicegroup_name'  => 'servicegroup_name',
+        'servicegroup_alias' => 'alias',
+        'host'               => 'service.host_name',
+        'host_name'          => 'service.host_name',
+        'service'            => 'service.service_description',
+        'service_description'=> 'service.service_description'
+
     );
 
     public function selectBase()
     {
-        $this->select()->from("hostgroups", array());
+        $this->select()->from("servicegroups", array());
     }
 }
