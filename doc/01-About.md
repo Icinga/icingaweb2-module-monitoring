@@ -1,5 +1,8 @@
 # About the Monitoring Module <a id="monitoring-module-about"></a>
 
+> **Deprecated:** This module only receives security fixes.
+> The recommended successor is [Icinga DB Web](https://icinga.com/docs/icinga-db-web).
+
 Please read the following chapters for more insights on this module:
 
 * [Installation](02-Installation.md#monitoring-module-installation)
